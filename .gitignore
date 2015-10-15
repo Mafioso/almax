@@ -1,0 +1,12 @@
+*.pyc
+*.pyo
+*.so
+*.class
+*.sqlite3
+*.log
+*~
+build/
+dist/
+.tox/
+.DS_Store
+.eggs
