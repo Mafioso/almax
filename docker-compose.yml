@@ -1,0 +1,15 @@
+db:
+  image: postgres:9.4.5
+  environment:
+    - POSTGRES_USER=odoo
+    - POSTGRES_PASSWORD=odoo
+
+odoo:
+  image: odoo:9
+  volumes:
+    - .:/etc/odoo
+    - ./addons:/mnt/extra-addons
+  ports:
+    - "8000:8069"
+  links:
+    - db
